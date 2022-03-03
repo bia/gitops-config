@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: kind-kind
+  namespace: wego-system
+resources:
+- gitops-runtime.yaml
+- flux-source-resource.yaml
+- flux-system-kustomization-resource.yaml
+- flux-user-kustomization-resource.yaml
+- wego-app.yaml
